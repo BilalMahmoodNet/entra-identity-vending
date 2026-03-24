@@ -4,6 +4,6 @@ module "ops_vending" {
 
   # Explicitly define the "Truth" for this specific deployment
   vending_prefix = "Vending"
-  team_names     = ["Cloud-Ops"]
+  team_names     = ["Cloud-Ops", "Dev-Ops"]
   env            = "PROD"
 }
