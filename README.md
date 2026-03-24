@@ -26,7 +26,6 @@ This "Vending Machine" uses Terraform to:
 
 ### 1. Initialize the Backend
 Since this project uses a "Partial Backend" for security, you must provide your storage details during initialization:
-
 ```bash
 terraform init \
   -backend-config="resource_group_name=<YOUR_RG>" \
@@ -34,8 +33,8 @@ terraform init \
   -backend-config="container_name=tfstate" \
   -backend-config="key=iam-vending.tfstate"
 
-**### 2. How  to Use This Now**
 
-Clone repo, run `az login`, and then run `terraform init` with **town** storage account. 
+How  to Use This Now
+Clone repo, run `az login`, and then run `terraform init` with OWN  storage account. 
 
 
