@@ -1,8 +1,9 @@
+# This is the ONLY block you need for the Ops environment
 module "ops_vending" {
   source = "../../modules/vending"
 
-  # Pass the values specific to THIS state file
-  vending_prefix = "EV-VENDING"
+  # Explicitly define the "Truth" for this specific deployment
+  vending_prefix = "Vending"
   team_names     = ["Cloud-Ops"]
   env            = "PROD"
 }
