@@ -2,17 +2,17 @@ variable "vending_prefix" {
   type        = string
   description = "Pre-fix"
   default     = "VENDING"
+  # Used for naming the groups, e.g. "VENDING-Cloud-Ops-PROD-GRP"
 }
 
 variable "team_names" {
   type        = list(string)
   description = "List of teams to create identity groups for"
-  # You can leave the default empty or put your teams here
+  # List of teams to create groups for.
   default     = ["Cloud-Platform", "Cloud-Ops"] 
 }
 
 variable "env" {
   type        = string
-  description = "Deployment environment"
-  default     = "DEV"
+  description = "The environment suffix (DEV/PROD)"
 }

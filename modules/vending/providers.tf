@@ -11,16 +11,18 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "pro-architect-mgmt-rg"
-    storage_account_name = "archlabtfstate20419f"
-    container_name       = "tfstate"
-    key                  = "iam-vending-machine.tfstate"
+    # resource_group_name  = "PROD-RG" 
+    # storage_account_name = "PROD-STORAGE"
+    # container_name       = "tfstate"
+    # key                  = "iam-vending-machine.tfstate"
   }
 }
 
 provider "azurerm" {
   features {}
-  subscription_id = "aa14ada3-c48e-4778-aecc-fbdd595f9868"
+  # subscription_id = "REPLACE WITH SUBSCRIPTION ID OR USE AZ LOGIN"
+  resource_provider_registrations = "none"
 }
 
 provider "azuread" {}
+
