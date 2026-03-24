@@ -5,8 +5,8 @@ data "azurerm_role_definition" "reader" {
 
 resource "azurerm_role_assignment" "vending_reader" {
   for_each = toset(var.team_names)
-  scope = data.azurerm_subscription.primary.id
+  scope    = data.azurerm_subscription.primary.id
   # Populate the role definition ID using the data source we created to look up the built in Reader role. This ensures it works across any tenant without hardcoding IDs.
   role_definition_id = data.azurerm_role_definition.reader.id
-  principal_id = azuread_group.vending_group[each.key].object_id
+  principal_id       = azuread_group.vending_group[each.key].object_id
 }

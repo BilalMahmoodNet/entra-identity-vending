@@ -9,7 +9,7 @@ variable "team_names" {
   type        = list(string)
   description = "List of teams to create identity groups for"
   # List of teams to create groups for.
-  default     = ["Cloud-Platform", "Cloud-Ops"] 
+  default = ["Cloud-Platform", "Cloud-Ops"]
 }
 
 variable "env" {
